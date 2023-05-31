@@ -14,3 +14,5 @@ def task_serializer(task: Task) -> dict:
         'state': task.state
     }
 
+def dump_db(db, serializer):
+    return [serializer(obj) for obj in db]
